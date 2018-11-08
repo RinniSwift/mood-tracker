@@ -13,6 +13,7 @@
 		A43F426E2194EF46001BCEEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A43F426D2194EF46001BCEEC /* Assets.xcassets */; };
 		A43F42712194EF46001BCEEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A43F426F2194EF46001BCEEC /* LaunchScreen.storyboard */; };
 		A43F42792194EF5E001BCEEC /* MoodEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F42782194EF5E001BCEEC /* MoodEntry.swift */; };
+		A43F427E2194FDC0001BCEEC /* MoodEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F427D2194FDC0001BCEEC /* MoodEntryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A43F42702194EF46001BCEEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A43F42722194EF46001BCEEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A43F42782194EF5E001BCEEC /* MoodEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntry.swift; sourceTree = "<group>"; };
+		A43F427D2194FDC0001BCEEC /* MoodEntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				A43F42682194EF45001BCEEC /* ViewController.swift */,
+				A43F427D2194FDC0001BCEEC /* MoodEntryTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				A43F42692194EF45001BCEEC /* ViewController.swift in Sources */,
 				A43F42792194EF5E001BCEEC /* MoodEntry.swift in Sources */,
 				A43F42672194EF45001BCEEC /* AppDelegate.swift in Sources */,
+				A43F427E2194FDC0001BCEEC /* MoodEntryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +315,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V63UZ8ZMFC;
 				INFOPLIST_FILE = moodTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -328,6 +333,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V63UZ8ZMFC;
 				INFOPLIST_FILE = moodTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
