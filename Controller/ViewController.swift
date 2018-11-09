@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         tableView.dataSource = self
+        tableView.delegate = self
         
         let goodEntry = MoodEntry(mood: .good, date: Date())
         let neutralEntry = MoodEntry(mood: .neutral, date: Date())
@@ -27,7 +28,20 @@ class ViewController: UIViewController {
         tableView.reloadData()
     }
 
+    @IBAction func addEntry(_ sender: UIBarButtonItem) {
+        let now = Date()
+        let newMood = MoodEntry(mood: .amazing, date: now)
+        entries.insert(newMood, at: 0)
+        tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+    }
+    
+}
 
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedEntry = entries[indexPath.row]
+        print("selected mood was \(selectedEntry.mood.stringValue)")
+    }
 }
 
 extension ViewController: UITableViewDataSource {
@@ -45,6 +59,7 @@ extension ViewController: UITableViewDataSource {
         
         return cell
     }
+    
     
     
 }
