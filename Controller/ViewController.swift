@@ -33,6 +33,30 @@ class ViewController: UIViewController {
         let newMood = MoodEntry(mood: .amazing, date: now)
         entries.insert(newMood, at: 0)
         tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+        print("added entry: \(newMood.mood.stringValue)")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            switch identifier {
+            case "showEntryDetails":
+                guard
+                    let selectedCell = sender as? UITableViewCell,
+                    let indexPath = tableView.indexPath(for: selectedCell) else {
+                        return print("failed to locate index path from sender")
+                }
+                
+                guard let destination = segue.destination as? MoodDetailedViewController else {
+                    return print("story board not set up correctly")
+                }
+                
+                let entry = entries[indexPath.row]
+                destination.mood = entry.mood
+                destination.date = entry.date
+            default: break
+            }
+        }
+        
     }
     
 }
