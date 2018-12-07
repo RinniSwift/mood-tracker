@@ -9,28 +9,28 @@
 import Foundation
 import UIKit
 
-class MoodDetailedViewController: UIViewController {
-    var date: Date!
-    var mood: MoodEntry.Mood!
-    
-    @IBOutlet weak var moodColor: UIView!
-    @IBOutlet weak var moodTitle: UILabel!
-    @IBOutlet weak var moodDate: UILabel!
-    
-    
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-        moodColor.backgroundColor = mood.colorValue
-        moodTitle.text = mood.stringValue
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd (hh:mm)"
-        let now = date
-        moodDate.text = dateFormatter.string(from: now!)
-        
-    }
-}
+//class MoodDetailedViewController: UIViewController {
+//    
+//    // MARK: Variables
+//    var date: Date!
+//    var mood: MoodEntry.Mood!
+//    
+//    // MARK: Outlets
+//    @IBOutlet weak var moodColor: UIView!
+//    @IBOutlet weak var moodTitle: UILabel!
+//    @IBOutlet weak var moodDate: UILabel!
+//
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        
+//        moodColor.backgroundColor = mood.colorValue
+//        moodTitle.text = mood.stringValue
+//        
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "yyyy-MM-dd (hh:mm)"
+//        let now = date
+//        moodDate.text = dateFormatter.string(from: now!)
+//    }
+//    
+//    
+//}

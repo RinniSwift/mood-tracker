@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A41136A321B8A8A20003FD6C /* DetailedEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41136A221B8A8A20003FD6C /* DetailedEntryViewController.swift */; };
 		A43F42672194EF45001BCEEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F42662194EF45001BCEEC /* AppDelegate.swift */; };
 		A43F42692194EF45001BCEEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F42682194EF45001BCEEC /* ViewController.swift */; };
 		A43F426C2194EF45001BCEEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A43F426A2194EF45001BCEEC /* Main.storyboard */; };
@@ -14,10 +15,63 @@
 		A43F42712194EF46001BCEEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A43F426F2194EF46001BCEEC /* LaunchScreen.storyboard */; };
 		A43F42792194EF5E001BCEEC /* MoodEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F42782194EF5E001BCEEC /* MoodEntry.swift */; };
 		A43F427E2194FDC0001BCEEC /* MoodEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F427D2194FDC0001BCEEC /* MoodEntryTableViewCell.swift */; };
+		A46B2B9721B9D46E0022D679 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46B2B9521B9D46E0022D679 /* Interface.storyboard */; };
+		A46B2B9921B9D46F0022D679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A46B2B9821B9D46F0022D679 /* Assets.xcassets */; };
+		A46B2BA021B9D46F0022D679 /* WatchMoodTracker Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A46B2B9F21B9D46F0022D679 /* WatchMoodTracker Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A46B2BA521B9D46F0022D679 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B2BA421B9D46F0022D679 /* InterfaceController.swift */; };
+		A46B2BA721B9D46F0022D679 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B2BA621B9D46F0022D679 /* ExtensionDelegate.swift */; };
+		A46B2BA921B9D46F0022D679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A46B2BA821B9D46F0022D679 /* Assets.xcassets */; };
+		A46B2BAD21B9D46F0022D679 /* WatchMoodTracker.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A46B2B9321B9D46E0022D679 /* WatchMoodTracker.app */; };
+		A46B2BB721B9D6BE0022D679 /* MoodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B2BB621B9D6BE0022D679 /* MoodRow.swift */; };
+		A46B2BB821B9D7F40022D679 /* MoodEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F42782194EF5E001BCEEC /* MoodEntry.swift */; };
+		A46B2BBC21B9DAF60022D679 /* MoodInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B2BBB21B9DAF60022D679 /* MoodInterfaceController.swift */; };
 		A4BB31E02198B9A8006BC76B /* MoodDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BB31DF2198B9A8006BC76B /* MoodDetailedViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A46B2BA121B9D46F0022D679 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A43F425B2194EF45001BCEEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A46B2B9E21B9D46F0022D679;
+			remoteInfo = "WatchMoodTracker Extension";
+		};
+		A46B2BAB21B9D46F0022D679 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A43F425B2194EF45001BCEEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A46B2B9221B9D46E0022D679;
+			remoteInfo = WatchMoodTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A46B2BB121B9D46F0022D679 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A46B2BA021B9D46F0022D679 /* WatchMoodTracker Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A46B2BB521B9D46F0022D679 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				A46B2BAD21B9D46F0022D679 /* WatchMoodTracker.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		A41136A221B8A8A20003FD6C /* DetailedEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedEntryViewController.swift; sourceTree = "<group>"; };
 		A43F42632194EF45001BCEEC /* moodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A43F42662194EF45001BCEEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A43F42682194EF45001BCEEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,11 +81,29 @@
 		A43F42722194EF46001BCEEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A43F42782194EF5E001BCEEC /* MoodEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntry.swift; sourceTree = "<group>"; };
 		A43F427D2194FDC0001BCEEC /* MoodEntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntryTableViewCell.swift; sourceTree = "<group>"; };
+		A46B2B9321B9D46E0022D679 /* WatchMoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchMoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A46B2B9621B9D46E0022D679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		A46B2B9821B9D46F0022D679 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A46B2B9A21B9D46F0022D679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A46B2B9F21B9D46F0022D679 /* WatchMoodTracker Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchMoodTracker Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A46B2BA421B9D46F0022D679 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		A46B2BA621B9D46F0022D679 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		A46B2BA821B9D46F0022D679 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A46B2BAA21B9D46F0022D679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A46B2BB621B9D6BE0022D679 /* MoodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRow.swift; sourceTree = "<group>"; };
+		A46B2BBB21B9DAF60022D679 /* MoodInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodInterfaceController.swift; sourceTree = "<group>"; };
 		A4BB31DF2198B9A8006BC76B /* MoodDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodDetailedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A43F42602194EF45001BCEEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A46B2B9C21B9D46F0022D679 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,6 +121,8 @@
 				A43F427B2194EFFF001BCEEC /* View */,
 				A43F427A2194EFF7001BCEEC /* Model */,
 				A43F42652194EF45001BCEEC /* moodTracker */,
+				A46B2B9421B9D46E0022D679 /* WatchMoodTracker */,
+				A46B2BA321B9D46F0022D679 /* WatchMoodTracker Extension */,
 				A43F42642194EF45001BCEEC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				A43F42632194EF45001BCEEC /* moodTracker.app */,
+				A46B2B9321B9D46E0022D679 /* WatchMoodTracker.app */,
+				A46B2B9F21B9D46F0022D679 /* WatchMoodTracker Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,8 +169,32 @@
 				A43F42682194EF45001BCEEC /* ViewController.swift */,
 				A43F427D2194FDC0001BCEEC /* MoodEntryTableViewCell.swift */,
 				A4BB31DF2198B9A8006BC76B /* MoodDetailedViewController.swift */,
+				A41136A221B8A8A20003FD6C /* DetailedEntryViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		A46B2B9421B9D46E0022D679 /* WatchMoodTracker */ = {
+			isa = PBXGroup;
+			children = (
+				A46B2B9521B9D46E0022D679 /* Interface.storyboard */,
+				A46B2B9821B9D46F0022D679 /* Assets.xcassets */,
+				A46B2B9A21B9D46F0022D679 /* Info.plist */,
+			);
+			path = WatchMoodTracker;
+			sourceTree = "<group>";
+		};
+		A46B2BA321B9D46F0022D679 /* WatchMoodTracker Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A46B2BA421B9D46F0022D679 /* InterfaceController.swift */,
+				A46B2BA621B9D46F0022D679 /* ExtensionDelegate.swift */,
+				A46B2BA821B9D46F0022D679 /* Assets.xcassets */,
+				A46B2BAA21B9D46F0022D679 /* Info.plist */,
+				A46B2BB621B9D6BE0022D679 /* MoodRow.swift */,
+				A46B2BBB21B9DAF60022D679 /* MoodInterfaceController.swift */,
+			);
+			path = "WatchMoodTracker Extension";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -107,15 +207,51 @@
 				A43F425F2194EF45001BCEEC /* Sources */,
 				A43F42602194EF45001BCEEC /* Frameworks */,
 				A43F42612194EF45001BCEEC /* Resources */,
+				A46B2BB521B9D46F0022D679 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A46B2BAC21B9D46F0022D679 /* PBXTargetDependency */,
 			);
 			name = moodTracker;
 			productName = moodTracker;
 			productReference = A43F42632194EF45001BCEEC /* moodTracker.app */;
 			productType = "com.apple.product-type.application";
+		};
+		A46B2B9221B9D46E0022D679 /* WatchMoodTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A46B2BB221B9D46F0022D679 /* Build configuration list for PBXNativeTarget "WatchMoodTracker" */;
+			buildPhases = (
+				A46B2B9121B9D46E0022D679 /* Resources */,
+				A46B2BB121B9D46F0022D679 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A46B2BA221B9D46F0022D679 /* PBXTargetDependency */,
+			);
+			name = WatchMoodTracker;
+			productName = WatchMoodTracker;
+			productReference = A46B2B9321B9D46E0022D679 /* WatchMoodTracker.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		A46B2B9E21B9D46F0022D679 /* WatchMoodTracker Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A46B2BAE21B9D46F0022D679 /* Build configuration list for PBXNativeTarget "WatchMoodTracker Extension" */;
+			buildPhases = (
+				A46B2B9B21B9D46F0022D679 /* Sources */,
+				A46B2B9C21B9D46F0022D679 /* Frameworks */,
+				A46B2B9D21B9D46F0022D679 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WatchMoodTracker Extension";
+			productName = "WatchMoodTracker Extension";
+			productReference = A46B2B9F21B9D46F0022D679 /* WatchMoodTracker Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -123,12 +259,18 @@
 		A43F425B2194EF45001BCEEC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1000;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Rinni Swift";
 				TargetAttributes = {
 					A43F42622194EF45001BCEEC = {
 						CreatedOnToolsVersion = 10.0;
+					};
+					A46B2B9221B9D46E0022D679 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					A46B2B9E21B9D46F0022D679 = {
+						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
@@ -146,6 +288,8 @@
 			projectRoot = "";
 			targets = (
 				A43F42622194EF45001BCEEC /* moodTracker */,
+				A46B2B9221B9D46E0022D679 /* WatchMoodTracker */,
+				A46B2B9E21B9D46F0022D679 /* WatchMoodTracker Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -161,6 +305,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A46B2B9121B9D46E0022D679 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A46B2B9921B9D46F0022D679 /* Assets.xcassets in Resources */,
+				A46B2B9721B9D46E0022D679 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A46B2B9D21B9D46F0022D679 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A46B2BA921B9D46F0022D679 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -173,10 +334,36 @@
 				A43F42792194EF5E001BCEEC /* MoodEntry.swift in Sources */,
 				A43F42672194EF45001BCEEC /* AppDelegate.swift in Sources */,
 				A43F427E2194FDC0001BCEEC /* MoodEntryTableViewCell.swift in Sources */,
+				A41136A321B8A8A20003FD6C /* DetailedEntryViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A46B2B9B21B9D46F0022D679 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A46B2BA721B9D46F0022D679 /* ExtensionDelegate.swift in Sources */,
+				A46B2BA521B9D46F0022D679 /* InterfaceController.swift in Sources */,
+				A46B2BB721B9D6BE0022D679 /* MoodRow.swift in Sources */,
+				A46B2BB821B9D7F40022D679 /* MoodEntry.swift in Sources */,
+				A46B2BBC21B9DAF60022D679 /* MoodInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A46B2BA221B9D46F0022D679 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A46B2B9E21B9D46F0022D679 /* WatchMoodTracker Extension */;
+			targetProxy = A46B2BA121B9D46F0022D679 /* PBXContainerItemProxy */;
+		};
+		A46B2BAC21B9D46F0022D679 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A46B2B9221B9D46E0022D679 /* WatchMoodTracker */;
+			targetProxy = A46B2BAB21B9D46F0022D679 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A43F426A2194EF45001BCEEC /* Main.storyboard */ = {
@@ -193,6 +380,14 @@
 				A43F42702194EF46001BCEEC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A46B2B9521B9D46E0022D679 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A46B2B9621B9D46E0022D679 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -350,6 +545,88 @@
 			};
 			name = Release;
 		};
+		A46B2BAF21B9D46F0022D679 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V63UZ8ZMFC;
+				INFOPLIST_FILE = "WatchMoodTracker Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rinniswift.moodTracker.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		A46B2BB021B9D46F0022D679 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V63UZ8ZMFC;
+				INFOPLIST_FILE = "WatchMoodTracker Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rinniswift.moodTracker.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
+		A46B2BB321B9D46F0022D679 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V63UZ8ZMFC;
+				IBSC_MODULE = WatchMoodTracker_Extension;
+				INFOPLIST_FILE = WatchMoodTracker/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = rinniswift.moodTracker.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		A46B2BB421B9D46F0022D679 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V63UZ8ZMFC;
+				IBSC_MODULE = WatchMoodTracker_Extension;
+				INFOPLIST_FILE = WatchMoodTracker/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = rinniswift.moodTracker.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -367,6 +644,24 @@
 			buildConfigurations = (
 				A43F42762194EF46001BCEEC /* Debug */,
 				A43F42772194EF46001BCEEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A46B2BAE21B9D46F0022D679 /* Build configuration list for PBXNativeTarget "WatchMoodTracker Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A46B2BAF21B9D46F0022D679 /* Debug */,
+				A46B2BB021B9D46F0022D679 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A46B2BB221B9D46F0022D679 /* Build configuration list for PBXNativeTarget "WatchMoodTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A46B2BB321B9D46F0022D679 /* Debug */,
+				A46B2BB421B9D46F0022D679 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

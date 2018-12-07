@@ -66,7 +66,7 @@
                                             <outlet property="imageViewMoodColor" destination="5xR-lU-8gw" id="nch-rZ-46Z"/>
                                             <outlet property="labelMoodDate" destination="lv2-AF-Taw" id="TaI-hU-dOu"/>
                                             <outlet property="labelMoodTitle" destination="7yH-uZ-dLE" id="90Q-iJ-ood"/>
-                                            <segue destination="0G3-hO-EJ9" kind="show" identifier="showEntryDetails" id="ORn-6U-vXE"/>
+                                            <segue destination="L4z-Pr-AwC" kind="show" identifier="showEntryDetails" id="PQ1-Wb-Yha"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -85,6 +85,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="7XX-Kj-f4b">
                             <connections>
                                 <action selector="addEntry:" destination="BYZ-38-t0r" id="tob-mk-BDR"/>
+                                <segue destination="L4z-Pr-AwC" kind="show" identifier="showNewEntry" id="q5h-0M-Z00"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -96,60 +97,159 @@
             </objects>
             <point key="canvasLocation" x="992.79999999999995" y="27.436281859070466"/>
         </scene>
-        <!--Mood Detailed View Controller-->
-        <scene sceneID="fMb-uh-h0o">
+        <!--Details-->
+        <scene sceneID="hMB-fK-4NL">
             <objects>
-                <viewController id="0G3-hO-EJ9" customClass="MoodDetailedViewController" customModule="moodTracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5DJ-aH-dVb">
+                <viewController id="L4z-Pr-AwC" customClass="DetailedViewController" customModule="moodTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ehI-JI-rSy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xmA-2s-5gX">
-                                <rect key="frame" x="67.5" y="129" width="240" height="130"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="130" id="bve-IC-8T3"/>
-                                    <constraint firstAttribute="width" constant="240" id="hak-cS-Aef"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gB-k2-vbT">
-                                <rect key="frame" x="0.0" y="324" width="375" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibp-7J-whf">
-                                <rect key="frame" x="0.0" y="370" width="375" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="Sle-4s-4S5"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="o3w-K5-OqL">
+                                <rect key="frame" x="16" y="80" width="343" height="571"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6A-LP-1uw">
+                                        <rect key="frame" x="144.5" y="0.0" width="54" height="34.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0Qp-Yx-4IO">
+                                        <rect key="frame" x="11.5" y="42.5" width="320" height="296"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="565674554.15541899">
+                                            <!--2018-12-05 03:49:14 +0000-->
+                                        </date>
+                                        <connections>
+                                            <action selector="datePickerDidChangeValue:" destination="L4z-Pr-AwC" eventType="valueChanged" id="NRc-2a-xF3"/>
+                                        </connections>
+                                    </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mood" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKN-5E-7vj">
+                                        <rect key="frame" x="138" y="346.5" width="67.5" height="34.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Os-fE-7dj">
+                                        <rect key="frame" x="121.5" y="389" width="100" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="glz-ad-KTM"/>
+                                        </constraints>
+                                        <state key="normal" title="Amazing"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="pressMood:" destination="L4z-Pr-AwC" eventType="touchUpInside" id="PjR-24-AmE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6y-MT-7n4">
+                                        <rect key="frame" x="121.5" y="427" width="100" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="iHK-Fd-jRS"/>
+                                        </constraints>
+                                        <state key="normal" title="Good"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="pressMood:" destination="L4z-Pr-AwC" eventType="touchUpInside" id="33V-If-ePe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8v-p9-Bel">
+                                        <rect key="frame" x="121.5" y="465" width="100" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="hpU-tf-uBK"/>
+                                        </constraints>
+                                        <state key="normal" title="Neutral"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="pressMood:" destination="L4z-Pr-AwC" eventType="touchUpInside" id="bpX-Io-5nm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGf-Xy-1fd">
+                                        <rect key="frame" x="121.5" y="503" width="100" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="P6L-Vq-hS0"/>
+                                        </constraints>
+                                        <state key="normal" title="Bad"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="pressMood:" destination="L4z-Pr-AwC" eventType="touchUpInside" id="Mae-ds-fTg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JG4-fH-2ku">
+                                        <rect key="frame" x="121.5" y="541" width="100" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="dId-XI-paj"/>
+                                        </constraints>
+                                        <state key="normal" title="Terrible"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="pressMood:" destination="L4z-Pr-AwC" eventType="touchUpInside" id="lxB-jJ-8OV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ibp-7J-whf" firstAttribute="leading" secondItem="5I6-XQ-WzH" secondAttribute="leading" id="0lr-a9-gaX"/>
-                            <constraint firstItem="1gB-k2-vbT" firstAttribute="leading" secondItem="5I6-XQ-WzH" secondAttribute="leading" id="IFL-gd-MCM"/>
-                            <constraint firstItem="5I6-XQ-WzH" firstAttribute="trailing" secondItem="ibp-7J-whf" secondAttribute="trailing" id="fdQ-TN-gvw"/>
-                            <constraint firstItem="5I6-XQ-WzH" firstAttribute="trailing" secondItem="1gB-k2-vbT" secondAttribute="trailing" id="kww-Mc-JFu"/>
-                            <constraint firstItem="xmA-2s-5gX" firstAttribute="centerX" secondItem="5DJ-aH-dVb" secondAttribute="centerX" id="lLN-sg-tE0"/>
-                            <constraint firstItem="1gB-k2-vbT" firstAttribute="top" secondItem="xmA-2s-5gX" secondAttribute="bottom" constant="65" id="mTC-En-nV1"/>
-                            <constraint firstItem="xmA-2s-5gX" firstAttribute="top" secondItem="5I6-XQ-WzH" secondAttribute="top" constant="65" id="rKf-Lu-KNG"/>
-                            <constraint firstItem="ibp-7J-whf" firstAttribute="top" secondItem="1gB-k2-vbT" secondAttribute="bottom" constant="25" id="yUN-aM-ptx"/>
+                            <constraint firstItem="o3w-K5-OqL" firstAttribute="top" secondItem="44Z-5U-iu4" secondAttribute="top" constant="16" id="RPE-i3-60f"/>
+                            <constraint firstItem="44Z-5U-iu4" firstAttribute="bottom" secondItem="o3w-K5-OqL" secondAttribute="bottom" constant="16" id="XIz-3S-Gu0"/>
+                            <constraint firstItem="o3w-K5-OqL" firstAttribute="leading" secondItem="44Z-5U-iu4" secondAttribute="leading" constant="16" id="hd1-c4-wJF"/>
+                            <constraint firstItem="44Z-5U-iu4" firstAttribute="trailing" secondItem="o3w-K5-OqL" secondAttribute="trailing" constant="16" id="xpq-Nz-ecV"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="5I6-XQ-WzH"/>
+                        <viewLayoutGuide key="safeArea" id="44Z-5U-iu4"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Details" id="Q8a-hX-jrr">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="tX0-01-7fT">
+                            <connections>
+                                <action selector="pressCancel:" destination="L4z-Pr-AwC" id="zEJ-CJ-Hob"/>
+                                <segue destination="QpB-Vd-lQj" kind="unwind" unwindAction="unwindToMain:" id="iou-x5-m4p"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="piC-q7-4fV">
+                            <connections>
+                                <action selector="pressSave:" destination="L4z-Pr-AwC" id="VE0-ds-3Qz"/>
+                                <segue destination="QpB-Vd-lQj" kind="unwind" unwindAction="unwindToMain:" id="eAk-IL-D7S"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="moodColor" destination="xmA-2s-5gX" id="JBi-c9-3gJ"/>
-                        <outlet property="moodDate" destination="ibp-7J-whf" id="ELS-SD-01h"/>
-                        <outlet property="moodTitle" destination="1gB-k2-vbT" id="0Pc-Ep-9Em"/>
+                        <outlet property="buttonAmazingMood" destination="6Os-fE-7dj" id="gI0-Jv-TwG"/>
+                        <outlet property="buttonBadMood" destination="aGf-Xy-1fd" id="UdX-Ig-yQi"/>
+                        <outlet property="buttonGoodMood" destination="v6y-MT-7n4" id="ZEQ-64-Jei"/>
+                        <outlet property="buttonNeutralMood" destination="P8v-p9-Bel" id="ubH-Vk-cWl"/>
+                        <outlet property="buttonTerribleMood" destination="JG4-fH-2ku" id="fwa-BP-KAH"/>
+                        <outlet property="datePicker" destination="0Qp-Yx-4IO" id="6MU-Gf-Uhh"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="72H-dG-W2w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gxV-t7-fZ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="QpB-Vd-lQj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1846" y="27"/>
+            <point key="canvasLocation" x="1954" y="27"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1aB-nJ-06g">
@@ -170,4 +270,7 @@
             <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="PQ1-Wb-Yha"/>
+    </inferredMetricsTieBreakers>
 </document>
